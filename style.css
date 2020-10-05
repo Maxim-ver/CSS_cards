@@ -1,64 +1,86 @@
+/*  Config =======
+============================================== */
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Bebas Neue', cursive;
 }
+
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    height: 100vh;
+    font-family: 'Bebas Neue', cursive;
     background: darkolivegreen;
 }
+
+/*  Container  =======
+============================================== */
+
 .container {
     position: relative;
-    width: 1100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    width: 1100px;
     padding: 30px;
 }
-.container .card {
+
+/*  Cards =======
+============================================== */
+
+.card {
     position: relative;
-    width: 300px;
-    height: 215px;
-    background: white;
-    margin: 30px 10px;
-    padding: 20px 15px;
     display: flex;
     flex-direction: column;
-    box-shadow:  0 5px 202px rgba(0,0,0,0.5);
+
+    width: 300px;
+    height: 215px;
+
+    margin: 30px 10px;
+    padding: 20px 15px;
+
+    background: white;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
 }
-.container .card:hover {
+
+.card:hover {
     height: 420px;
 }
-.container .card .imgBx {
+
+.card__img-box {
     position: relative;
-    width: 260px;
-    height: 260px;
     top: -60px;
     left: 20px;
     z-index: 1;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+
+    width: 260px;
+    height: 260px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
 }
-.container .card .imgBx img {
+
+.card__img {
     max-width: 100%;
     border-radius: 4px;
 }
-.container .card .content {
+
+.card__content {
     position: relative;
     margin-top: -140px;
     padding: 10px 15px;
-    text-align: center;
     color: #111;
+    text-align: center;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
-.container .card:hover .content {
+
+.card:hover .card__content {
+    margin-top: -40px;
     visibility: visible;
     opacity: 1;
-    margin-top: -40px;
     transition-delay: 0.3s;
 }
